@@ -1,9 +1,10 @@
 import { NextFunction, Request, Response } from 'express';
 import multer from 'multer';
+import path from 'path';
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, './uploads');
+    cb(null, path.join(__dirname, './uploads'));
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);
@@ -25,7 +26,7 @@ const fileFilter = (
 const uploadMiddleware = multer({
   storage,
   fileFilter,
-}).single('image');
+}).single('file');
 
 export function upload(req: Request, res: Response, next: NextFunction) {
   uploadMiddleware(req, res, (err) => {
