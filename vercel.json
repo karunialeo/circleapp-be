@@ -4,7 +4,7 @@
     {
       "src": "src/index.ts",
       "use": "@vercel/node",
-      "config": { "includeFiles": ["build/**"] }
+      "config": { "includeFiles": ["dist/**"] }
     }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/" }]
