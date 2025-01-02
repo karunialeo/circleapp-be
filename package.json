@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
+    "start": "node src/index.ts",
     "prepare": "husky",
     "build": "tsc && prisma generate",
     "lint": "eslint --fix",
