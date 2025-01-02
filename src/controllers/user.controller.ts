@@ -1,9 +1,6 @@
 import { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
 
-const SECRET_KEY =
-  process.env.SECRET_KEY || 'aksjdkl2aj3djaklfji32dj2dj9ld92jd92j';
-
 const prisma = new PrismaClient();
 
 export async function getAllUsers(req: Request, res: Response) {

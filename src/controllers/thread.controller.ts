@@ -17,9 +17,9 @@ export async function createThread(req: Request, res: Response) {
 
   let imagePath: string | null = null;
   const file = req.file;
-  if (req.file) {
-    console.log(req.file);
-    imagePath = req.file.filename;
+  if (file) {
+    console.log(file);
+    imagePath = file.filename;
   }
 
   let data = {

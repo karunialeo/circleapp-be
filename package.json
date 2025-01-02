@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "prepare": "husky",
+    "build": "tsc && prisma generate",
     "lint": "eslint --fix",
     "format": "prettier --write \"src/**/*.ts\""
   },
